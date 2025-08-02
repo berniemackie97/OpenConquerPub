@@ -60,7 +60,7 @@ OpenConquer.sln
 
 ---
 
-## Roadmap (High-Level)
+## Roadmap
 
 * **Phase 1**: Core protocol & handshake (✅)
 * **Phase 2**: Account & char CRUD (✅)
