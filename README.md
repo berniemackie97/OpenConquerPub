@@ -64,8 +64,8 @@ OpenConquer.sln
 
 * **Phase 1**: Core protocol & handshake (✅)
 * **Phase 2**: Account & char CRUD (✅)
-* **Phase 3**: Experience & stats (✏️)
-* **Phase 4**: Movement & map logic (⏳)
+* **Phase 3**: Experience & stats (✅)
+* **Phase 4**: Movement & map logic (✏️)
 * **Phase 5**: Combat & skills (⏳)
 * **Phase 6**: NPC scripting & quests (⏳)
 * **Phase 7**: Economy, shops, items (⏳)
