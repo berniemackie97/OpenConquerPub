@@ -21,10 +21,10 @@
 OpenConquer.sln
 ├── OpenConquer.Protocol        # Packet definitions, crypto, serialization
 ├── OpenConquer.Domain          # Core models, enums, service interfaces
-├── OpenConquer.Infrastructure  # EF Core, networking hosts, scripting, metrics
-├── OpenConquer.AccountServer   # Login/auth host (IHostedService entrypoint)
-├── OpenConquer.GameServer      # World/logic host (IHostedService entrypoint)
-└── OpenConquer.Tests           # Protocol, unit, and integration tests
+├── OpenConquer.Infrastructure  # EF Core, networking hosts
+├── OpenConquer.AccountServer   # Login/auth host
+├── OpenConquer.GameServer      # World/logic host
+└── OpenConquer.Tests           # unit, and integration tests
 ```
 
 ### Project Responsibilities
@@ -32,37 +32,31 @@ OpenConquer.sln
 * **Protocol**
 
   * Defines packet schemas, reading/writing, encryption
-  * Pure-spec library with no dependencies beyond System
 
 * **Domain**
 
-  * Business types: `Account`, `Character`, `LevelStat`, etc.
-  * Service contracts (e.g. `IAccountService`, `ICharacterService`)
+  * Business types
+  * Service contracts
   * Enums and value objects
 
 * **Infrastructure**
 
   * EF Core DbContexts, migrations, entity configurations
   * Mapster mappings between EF entities and domain models
-  * Implementations of domain contracts (services)
-  * Networking framework: TCP listener, pipelined packet dispatch
+  * Implementations of domain contracts/services
   * Scripting host and telemetry integrations
 
 * **AccountServer**
 
   * Entrypoint for authentication & character listing
-  * Runs `AccountHandshakeService`, dispatches `ConnectPacket` & `CreatePlayerPacket`
 
 * **GameServer**
 
-  * Entrypoint for world simulation: movement, combat, NPCs, events
-  * Registers game handlers, worker loops, and the `ExperienceService`
+  * Entrypoint for world simulation: movement, combat, NPCs, events, etc
 
 * **Tests**
 
-  * Protocol compliance (handshake, packet formats)
-  * Domain logic (experience, damage formulas)
-  * Infrastructure integration (EF migrations, end-to-end flows)
+  * Tests lol
 
 ---
 
